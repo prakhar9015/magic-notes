@@ -22,8 +22,14 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        
             </ul>
+
+            <select name="search_option" id="dropdown">
+              <option value="title_search">Title</option>
+              <option value="content_search">Content</option>
+            </select>
+
+              <br>
             <form class="d-flex" role="search">
               <input class="form-control me-2" id="searchTxt" type="search" placeholder="Type to search 🔎" aria-label="Search">
               <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
@@ -32,6 +38,7 @@
         </div>
     </nav>
 
+    <br>
 
     <!-- my-3 -> margin at y-axis 3 rem -->
     <div class="container  my-3">
@@ -42,25 +49,26 @@
         <!-- notes as a card -->
         <div class="card" >
             <div class="card-body">
-                <h5 class="card-title">Add a note</h5>                
+                <h5 class="card-title">Title</h5> 
                 <div class="mb-3">
-                    <textarea class="form-control" id="addTxt" rows="3" required></textarea>
+                  <input type="text" class="form-control" id="addTitle" aria-describedby="title" placeholder="add a title...">
+                </div>
+
+                <br>
+
+                <h5 class="card-title">Content</h5> 
+                <div class="mb-3">
+                    <textarea class="form-control" id="addTxt" rows="3" placeholder="today is a good day..." required></textarea>
                 </div>
 
                 <a href="#" id="addBtn" class="btn btn-primary">Add note</a>
             </div>
         </div>
-
         <br>
-
         <h4>Your notes ...</h4>
         <hr>
         <br>
-
-        <div id="notes" class="row container-fluid">
-            
-        </div>
-
+        <div id="notes" class="row container-fluid"></div>
     </div>
 
 
