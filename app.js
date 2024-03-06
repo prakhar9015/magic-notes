@@ -115,6 +115,24 @@ search.addEventListener("input", function(){
 })
 
 
+const deleteAll = document.getElementById("deleteAll")
+deleteAll.addEventListener("click", ()=> {
+    let confirm = prompt(` ⚠️ Are you sure, you wanna delete all the notes ? \n
+        please type 'delete' to proceed...
+    `)
+
+    if (confirm == "delete"){
+        localStorage.clear()
+        location.reload()
+    }
+
+})
+
+
+
+
+
+
 // add title
 // search by either title or content
 // mark notes as important
